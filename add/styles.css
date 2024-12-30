@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+main {
+    margin-top: 80px; /* Adjust for fixed header */
+    width: 100%;
+    max-width: 1200px;
+}
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+}
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.summary {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin: 20px 0;
+    width: fit-content;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.summary p {
+    margin: 10px 0;
+}
+.classes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.class {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    flex: 1;
+    flex-basis: calc(33% - 20px); /* For 3 classes per row */
+    max-width: calc(33% - 20px); /* For 3 classes per row */
+    min-height: 200px; /* Increase height of rectangles */
+}
+.class h2 {
+    margin-top: 0;
+    color: #007BFF;
+}
+.class p {
+    margin: 5px 0;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: #0056b3;
+    color: white;
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the text */
+    left: 50%;
+    transform: translateX(-50%);
+}
+.tooltip:hover .tooltiptext,
+.tooltip:focus .tooltiptext {
+    visibility: visible;
+}
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.footer a:hover {
+    text-decoration: underline;
+}

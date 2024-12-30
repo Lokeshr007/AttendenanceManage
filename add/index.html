@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            justify-content: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        header {
+            padding-top: 0%;
+            width: 100%;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: slideInDown 1s ease-in-out;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffeb3b;
+        }
+
+        h1 {
+            margin: 20px 0;
+            font-size: 2.5em;
+            animation: zoomIn 1.5s ease-in-out;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        main p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        main ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        main ul li {
+            margin: 15px 0;
+        }
+
+        main ul li a {
+            text-decoration: none;
+            font-size: 1.5em;
+            color: #007BFF;
+            padding: 10px 25px;
+            border: 2px solid #007BFF;
+            border-radius: 5px;
+            background-color: white;
+            transition: background-color 0.3s, color 0.3s;
+            animation: bounceIn 1.5s ease-in-out;
+        }
+
+        main ul li a:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 40%, 60%, 80%, 100% {
+                animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            }
+            0% {
+                opacity: 0;
+                transform: scale3d(.3, .3, .3);
+            }
+            20% {
+                transform: scale3d(1.1, 1.1, 1.1);
+            }
+            40% {
+                transform: scale3d(.9, .9, .9);
+            }
+            60% {
+                opacity: 1;
+                transform: scale3d(1.03, 1.03, 1.03);
+            }
+            80% {
+                transform: scale3d(.97, .97, .97);
+            }
+            100% {
+                opacity: 1;
+                transform: scale3d(1, 1, 1);
+            }
+        }
+
+        .flip-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+            width: 1500px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .flip-card {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            animation: flip 3s infinite;
+        }
+        .flip-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @keyframes flip {
+            0%, 33.33% {
+                opacity: 1;
+                transform: rotateY(0deg);
+            }
+            33.34%, 66.66% {
+                opacity: 0;
+                transform: rotateY(180deg);
+            }
+            66.67%, 100% {
+                opacity: 1;
+                transform: rotateY(0deg);
+            }
+        }
+        .flip-card:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .flip-card:nth-child(2) {
+            animation-delay: 1s;
+        }
+        .flip-card:nth-child(3) {
+            animation-delay: 2s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="adviser_login.html" class="nav-link">Adviser Login</a></li>
+                <li><a href="hod_login.html" class="nav-link">HOD Login</a></li>
+                <li><a href="principal_login.html" class="nav-link">Principal Login</a></li>
+            </ul>
+        </nav>
+        <h1 class="fade-in">Welcome To ESEC Attendance Management System</h1>
+    </header>
+    <main>
+        
+        <div class="flip-container">
+            <div class="flip-card">
+                <img src="clg.png" alt="Image 1">
+            </div>
+            <div class="flip-card">
+                <img src="image.png" alt="Image 2">
+            </div>
+            <div class="flip-card">
+                <img src="image2.png" alt="Image 3">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
